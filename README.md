@@ -25,8 +25,8 @@ If you need an excellent knowledge dump on JavaScript and you wish to fully unde
 
 ## Contributing
 
-When making a pull-request, please ensure you follow the CONTRIBUTING guidelines.
+Do you see errors? Inaccuracies? Want to add your own quirky JS examples? Make a pull-request! :)
 
 ## License
 
-MIT License. View it in LICENSE.
+MIT License. View it in [LICENSE](https://github.com/kelsonic/example.js/tree/master/LICENSE).
