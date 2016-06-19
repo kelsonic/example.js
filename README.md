@@ -15,11 +15,13 @@ Welcome to Example.JS, the hub of JavaScript examples.
 
 #### Closures ([article](http://javascriptissexy.com/understand-javascript-closures-with-ease/) | [examples](https://github.com/kelsonic/example.js/tree/master/closures))
 
-#### .apply() ([article](http://javascriptissexy.com/javascript-apply-call-and-bind-methods-are-essential-for-javascript-professionals/) | [examples](https://github.com/kelsonic/example.js/tree/master/apply_bind_call))
+#### Methods
 
-#### .bind() ([article](http://javascriptissexy.com/javascript-apply-call-and-bind-methods-are-essential-for-javascript-professionals/) | [examples](https://github.com/kelsonic/example.js/tree/master/apply_bind_call))
+##### .apply() ([article](http://javascriptissexy.com/javascript-apply-call-and-bind-methods-are-essential-for-javascript-professionals/) | [examples](https://github.com/kelsonic/example.js/tree/master/apply_bind_call))
 
-#### .call() ([article](http://javascriptissexy.com/javascript-apply-call-and-bind-methods-are-essential-for-javascript-professionals/) | [examples](https://github.com/kelsonic/example.js/tree/master/apply_bind_call))
+##### .bind() ([article](http://javascriptissexy.com/javascript-apply-call-and-bind-methods-are-essential-for-javascript-professionals/) | [examples](https://github.com/kelsonic/example.js/tree/master/apply_bind_call))
+
+##### .call() ([article](http://javascriptissexy.com/javascript-apply-call-and-bind-methods-are-essential-for-javascript-professionals/) | [examples](https://github.com/kelsonic/example.js/tree/master/apply_bind_call))
 
 ## Acknowledgements
 
