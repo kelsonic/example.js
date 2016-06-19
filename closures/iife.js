@@ -1,4 +1,4 @@
-// This example is explained in detail below (just after this code box).​
+// This example is explained in detail below (just after this code box).
 function celebrityIDCreator(theCelebrities) {
   var i;
   var uniqueID = 100;
