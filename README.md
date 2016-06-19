@@ -1,5 +1,5 @@
 # Example.JS
-JavaScript is booming. 
+JavaScript is **booming**. 
 
 In fact, 94% of the top million websites use it. But learning it can be tough. 
 
