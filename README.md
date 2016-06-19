@@ -5,17 +5,17 @@ Welcome to Example.JS, the hub of JS examples.
 
 ## Subjects:
 
-#### Objects ([article](http://javascriptissexy.com/javascript-objects-in-detail/) | [examples](../objects))
+#### Objects ([article](http://javascriptissexy.com/javascript-objects-in-detail/) | [examples](https://github.com/kelsonic/example.js/tree/master/objects))
 
-#### The 'This' Keyword ([article](http://javascriptissexy.com/understand-javascripts-this-with-clarity-and-master-it/) | [examples](../this))
+#### The 'This' Keyword ([article](http://javascriptissexy.com/understand-javascripts-this-with-clarity-and-master-it/) | [examples](https://github.com/kelsonic/example.js/tree/master/this))
 
-#### Closures ([article](http://javascriptissexy.com/understand-javascript-closures-with-ease/) | [examples](../closures))
+#### Closures ([article](http://javascriptissexy.com/understand-javascript-closures-with-ease/) | [examples](https://github.com/kelsonic/example.js/tree/master/closures))
 
-#### .apply() ([article](http://javascriptissexy.com/javascript-apply-call-and-bind-methods-are-essential-for-javascript-professionals/) | [examples](../apply_bind_call))
+#### .apply() ([article](http://javascriptissexy.com/javascript-apply-call-and-bind-methods-are-essential-for-javascript-professionals/) | [examples](https://github.com/kelsonic/example.js/tree/master/apply_bind_call))
 
-#### .bind() ([article](http://javascriptissexy.com/javascript-apply-call-and-bind-methods-are-essential-for-javascript-professionals/) | [examples](../apply_bind_call))
+#### .bind() ([article](http://javascriptissexy.com/javascript-apply-call-and-bind-methods-are-essential-for-javascript-professionals/) | [examples](https://github.com/kelsonic/example.js/tree/master/apply_bind_call))
 
-#### .call() ([article](http://javascriptissexy.com/javascript-apply-call-and-bind-methods-are-essential-for-javascript-professionals/) | [examples](../apply_bind_call))
+#### .call() ([article](http://javascriptissexy.com/javascript-apply-call-and-bind-methods-are-essential-for-javascript-professionals/) | [examples](https://github.com/kelsonic/example.js/tree/master/apply_bind_call))
 
 ## Acknowledgements
 
