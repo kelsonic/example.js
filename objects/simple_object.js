@@ -1,2 +1,2 @@
 // Simple object
-var myFirstObject = {firstName: "Richard", favoriteAuthor: "Conrad"};
+var myFirstObject = {firstName: "Kelson", favoriteBook: "Superintelligence: Paths, Dangers, Strategies"};

@@ -7,7 +7,9 @@ Welcome to Example.JS, the hub of JS examples.
 
 #### Objects
 
-#### 'this' Keyword
+#### The 'This' Keyword
+
+#### Closures
 
 ## Contributing
 
