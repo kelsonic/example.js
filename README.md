@@ -1,7 +1,11 @@
 # Example.JS
-JavaScript is booming. In fact, 94% of the top million websites use it. But learning it can be tough. There's tons of resources out there, but sometimes it's better to learn by example.
+JavaScript is booming. 
 
-Welcome to Example.JS, the hub of JS examples.
+In fact, 94% of the top million websites use it. But learning it can be tough. 
+
+There's tons of resources out there, but sometimes it's better to learn by example.
+
+Welcome to Example.JS, the hub of JavaScript examples.
 
 ## Subjects:
 
