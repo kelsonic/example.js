@@ -1,9 +1,9 @@
 # Example.JS
 JavaScript is **booming**. 
 
-In fact, 94% of the top million websites use it. But learning it can be tough. 
+In fact, *94% of the top million websites use it*. But learning it, quickly, can prove difficult. 
 
-There's tons of resources out there, but sometimes it's better to learn by example.
+There are tons of JS resources out there, but sometimes it's better to learn by a ton of examples.
 
 Welcome to Example.JS, the hub of JavaScript examples.
 
@@ -25,13 +25,13 @@ Welcome to Example.JS, the hub of JavaScript examples.
 
 ## Acknowledgements
 
-This repo could not have been created without the brilliant articles written by [JavaScript.isSexy](http://javascriptissexy.com).
+This repo could not have been created without the brilliant articles from [JavaScript.isSexy](http://javascriptissexy.com).
 
-If you need an excellent knowledge dump on JavaScript and you wish to fully understand the language, you MUST read their [articles](http://javascriptissexy.com).
+If you need an excellent knowledge dump on JavaScript (and you wish to fully understand the language), you MUST read their [articles](http://javascriptissexy.com).
 
 ## Contributing
 
-Do you see errors? Inaccuracies? Want to add your own quirky JS examples? Make a pull-request! :)
+Do you see errors? Inaccuracies? Perhaps want to add your own quirky JS example? Make a pull-request! :)
 
 ## License
 
