@@ -1,7 +1,7 @@
 # Example.JS
 JavaScript is **booming**. 
 
-In fact, *94% of the top million websites use it*. But learning it, quickly, can prove difficult. 
+In fact, **94% of the top million websites use it**. But learning it, quickly, can prove difficult. 
 
 There are tons of JS resources out there, but sometimes it's better to learn by a ton of examples.
 
@@ -9,19 +9,17 @@ Welcome to Example.JS, the hub of JavaScript examples.
 
 ## Subjects:
 
-#### Objects ([article](http://javascriptissexy.com/javascript-objects-in-detail/) | [examples](https://github.com/kelsonic/example.js/tree/master/objects))
+#### .apply() ([article](http://javascriptissexy.com/javascript-apply-call-and-bind-methods-are-essential-for-javascript-professionals/) | [examples](https://github.com/kelsonic/example.js/tree/master/apply))
 
-#### The 'This' Keyword ([article](http://javascriptissexy.com/understand-javascripts-this-with-clarity-and-master-it/) | [examples](https://github.com/kelsonic/example.js/tree/master/this))
+#### .bind() ([article](http://javascriptissexy.com/javascript-apply-call-and-bind-methods-are-essential-for-javascript-professionals/) | [examples](https://github.com/kelsonic/example.js/tree/master/bind))
 
-#### Closures ([article](http://javascriptissexy.com/understand-javascript-closures-with-ease/) | [examples](https://github.com/kelsonic/example.js/tree/master/closures))
+#### .call() ([article](http://javascriptissexy.com/javascript-apply-call-and-bind-methods-are-essential-for-javascript-professionals/) | [examples](https://github.com/kelsonic/example.js/tree/master/call)
 
-#### Methods
+#### closures ([article](http://javascriptissexy.com/understand-javascript-closures-with-ease/) | [examples](https://github.com/kelsonic/example.js/tree/master/closures))
 
-##### .apply() ([article](http://javascriptissexy.com/javascript-apply-call-and-bind-methods-are-essential-for-javascript-professionals/) | [examples](https://github.com/kelsonic/example.js/tree/master/apply_bind_call))
+#### objects ([article](http://javascriptissexy.com/javascript-objects-in-detail/) | [examples](https://github.com/kelsonic/example.js/tree/master/objects))
 
-##### .bind() ([article](http://javascriptissexy.com/javascript-apply-call-and-bind-methods-are-essential-for-javascript-professionals/) | [examples](https://github.com/kelsonic/example.js/tree/master/apply_bind_call))
-
-##### .call() ([article](http://javascriptissexy.com/javascript-apply-call-and-bind-methods-are-essential-for-javascript-professionals/) | [examples](https://github.com/kelsonic/example.js/tree/master/apply_bind_call))
+#### this ([article](http://javascriptissexy.com/understand-javascripts-this-with-clarity-and-master-it/) | [examples](https://github.com/kelsonic/example.js/tree/master/this))
 
 ## Acknowledgements
 
