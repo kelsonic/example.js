@@ -5,21 +5,23 @@ In fact, **94% of the top million websites use it**. But learning it, quickly, c
 
 There are tons of JS resources out there, but sometimes it's better to learn by a ton of examples.
 
-Welcome to Example.JS, the hub of JavaScript examples.
+Welcome to Example.JS, **the hub of JavaScript examples**.
 
 ## Subjects:
 
-#### .apply() ([article](http://javascriptissexy.com/javascript-apply-call-and-bind-methods-are-essential-for-javascript-professionals/) | [examples](https://github.com/kelsonic/example.js/tree/master/apply))
+#### JS Interview Questions ([examples](https://github.com/kelsonic/example.js/tree/master/interview_questions))
 
-#### .bind()  ([article](http://javascriptissexy.com/javascript-apply-call-and-bind-methods-are-essential-for-javascript-professionals/) | [examples](https://github.com/kelsonic/example.js/tree/master/bind))
+#### .apply() ([examples](https://github.com/kelsonic/example.js/tree/master/apply))
 
-#### .call()  ([article](http://javascriptissexy.com/javascript-apply-call-and-bind-methods-are-essential-for-javascript-professionals/) | [examples](https://github.com/kelsonic/example.js/tree/master/call)
+#### .bind()  ([examples](https://github.com/kelsonic/example.js/tree/master/bind))
 
-#### closures ([article](http://javascriptissexy.com/understand-javascript-closures-with-ease/) | [examples](https://github.com/kelsonic/example.js/tree/master/closures))
+#### .call()  ([examples](https://github.com/kelsonic/example.js/tree/master/call)
 
-#### objects  ([article](http://javascriptissexy.com/javascript-objects-in-detail/) | [examples](https://github.com/kelsonic/example.js/tree/master/objects))
+#### closures ([examples](https://github.com/kelsonic/example.js/tree/master/closures))
 
-#### this     ([article](http://javascriptissexy.com/understand-javascripts-this-with-clarity-and-master-it/) | [examples](https://github.com/kelsonic/example.js/tree/master/this))
+#### objects  ([examples](https://github.com/kelsonic/example.js/tree/master/objects))
+
+#### this     ([examples](https://github.com/kelsonic/example.js/tree/master/this))
 
 ## Acknowledgements
 
@@ -33,4 +35,4 @@ Do you see errors? Inaccuracies? Perhaps want to add your own quirky JS example?
 
 ## License
 
-MIT License. View it in [LICENSE](https://github.com/kelsonic/example.js/tree/master/LICENSE).
+MIT License. Use it, share it, modify it, or [view the license](https://github.com/kelsonic/example.js/tree/master/LICENSE).
