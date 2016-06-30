@@ -204,22 +204,25 @@ function counterf(num){
 };
 
 
-
-console.log(identity(3));
-console.log(add(3, 4));
-console.log(mul(3, 4));
+// runs the functions above
+console.log(identity(3)); // returns 3
+console.log(add(3, 4)); // returns 7
+console.log(mul(3, 4)); // returns 12
 
 var idf = identityf(3);
-console.log(idf());
+console.log(idf()); // returns 3
 
-console.log(addf(3)(4));
-console.log(applyf(add)(3)(4));
-console.log(applyf(mul)(3)(4));
-var add3 = curry(add, 3);
-var mul3 = curry(mul, 3);
-console.log(add3(4));
-console.log(mul3(4));
+console.log(addf(3)(4)); // returns 7
+console.log(applyf(add)(3)(4)); // returns 7
+console.log(applyf(mul)(3)(4)); // returns 12
+var add3 = curry(add, 3); // adds 3 to arguments using this function
+var mul3 = curry(mul, 3); // multiplies 3 to arguments using this function
+console.log(add3(4)); // returns 7
+console.log(mul3(4)); // returns 12
 
+//  using the functions above how would you add 1 to a Number
+// 3 different ways
+// solutions
 var inc = curry(add, 1);
 console.log(inc(4));
 var inc = applyf(add)(1);
@@ -227,23 +230,25 @@ console.log(inc(5));
 var inc = addf(1);
 console.log(inc(6));
 
-Number.prototype.add = methodize(add)
-console.log((3).add(4));
 
-console.log(demethodize(Number.prototype.add)(5,6));
+Number.prototype.add = methodize(add) // adds add to Number objects
+console.log((3).add(4)); // returns 12
+
+console.log(demethodize(Number.prototype.add)(5,6)); // invokes the add function
+// result is 11
 
 var double = twice(add);
 var square = twice(mul);
 
-console.log(double(11));
-console.log(square(5));
-console.log(composeu(double, square)(3));
-console.log(composeb(add, mul)(2, 3, 5));
+console.log(double(11)); // returns 22
+console.log(square(5)); // returns 25
+console.log(composeu(double, square)(3)); // returns 36
+console.log(composeb(add, mul)(2, 3, 5)); // returns 25
 
 // add_once = once(add)
-// console.log(add_once(3, 4));
-// console.log(add_once(3, 4));
+// console.log(add_once(3, 4)); // returns 7
+// console.log(add_once(3, 4)); // no function error
 
 var counter = counterf(10)
-console.log(counter.inc());
-console.log(counter.dec());
+console.log(counter.inc()); // returns 11
+console.log(counter.dec()); // returns 10
