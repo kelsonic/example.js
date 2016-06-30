@@ -33,6 +33,11 @@ If you need an excellent knowledge dump on JavaScript (and you wish to fully und
 
 Do you see errors? Inaccuracies? Perhaps want to add your own quirky JS example? Make a pull-request! :)
 
+## Credits
+
+* [Kelsonic](https://github.com/kelsonic)
+* [ttalhouk](https://github.com/ttalhouk)
+
 ## License
 
 MIT License. Use it, share it, modify it, or [view the license](https://github.com/kelsonic/example.js/tree/master/LICENSE).
