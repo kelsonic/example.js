@@ -10,6 +10,7 @@ function identity(arg){
   return arg;
 };
 
+console.log(identity(3)); // returns 3
 // prob 2
 // Make a function add that adds two numbers & mul that multiplys them
 
@@ -22,6 +23,13 @@ function mul(num1, num2){
   return num1 * num2;
 };
 
+function sub(num1, num2){
+  return num1 - num2;
+};
+
+console.log(add(3, 4)); // returns 7
+console.log(mul(3, 4)); // returns 12
+console.log(sub(4, 3)); // returns 1
 // prob 3
 // Make a function returns a function that returns the argument
 // from the original function call
@@ -34,6 +42,9 @@ function identityf(arg){
   };
 };
 
+var idf = identityf(3);
+console.log(idf()); // returns 3
+
 // prob 4
 // Make a function addf that takes a number and returns a function
 // that when called with another argument returns the sum
@@ -45,6 +56,10 @@ function addf(num1){
     return add(num1, num2);
   };
 };
+
+console.log(addf(3)(4)); // returns 7
+console.log(applyf(add)(3)(4)); // returns 7
+console.log(applyf(mul)(3)(4)); // returns 12
 
 // prob 5
 // Make a function applyf that takes a function
@@ -78,6 +93,11 @@ function curry(funct, num1){
   };
 };
 
+var add3 = curry(add, 3); // adds 3 to arguments using this function
+var mul3 = curry(mul, 3); // multiplies 3 to arguments using this function
+console.log(add3(4)); // returns 7
+console.log(mul3(4)); // returns 12
+
 // prob 7
 // Make a function methodize that adds a method to a object
 // that can be called later on that object
@@ -92,6 +112,9 @@ function methodize(func){
   };
 };
 
+Number.prototype.add = methodize(add) // adds add to Number objects
+console.log((3).add(4)); // returns 12
+
 // prob 8
 // Make a function demethodize that will apply the function as originally
 // called
@@ -104,6 +127,10 @@ function demethodize(func){
     return func.call(that, y); // applies the method as a pure function
   };
 };
+
+console.log(demethodize(Number.prototype.add)(5,6)); // invokes the add function
+
+// result is 11
 
 // prob 9
 // Make a function twice that will apply the function to an argument twice
@@ -120,6 +147,12 @@ function twice(func){
   };
 };
 
+var double = twice(add);
+var square = twice(mul);
+
+console.log(double(11)); // returns 22
+console.log(square(5)); // returns 25
+
 // prob 10
 // Make a function composeu that will take two functions as arguments
 // and return a function
@@ -134,6 +167,7 @@ function composeu(func1, func2){
   };
 };
 
+console.log(composeu(double, square)(3)); // returns 36
 
 // prob 11
 // Make a function composeu that will take two functions as arguments
@@ -149,6 +183,8 @@ function composeb(func1, func2){
     return func2(num3,func1(num1, num2));
   };
 };
+
+console.log(composeb(add, mul)(2, 3, 5)); // returns 25
 
 // prob 12
 // Make a function once that will take a function as an argument
@@ -180,6 +216,13 @@ function composeb(func1, func2){
 //   };
 // };
 
+// add_once = once(add)
+// console.log(add_once(3, 4)); // returns 7
+// console.log(add_once(3, 4)); // no function error
+
+
+
+
 // prob 13
 // Make a function counterf that will allow inc or dec to the argument
 // which will increment or decrement by 1
@@ -203,22 +246,36 @@ function counterf(num){
   };
 };
 
+var counter = counterf(10)
+console.log(counter.inc()); // returns 11
+console.log(counter.dec()); // returns 10
 
-// runs the functions above
-console.log(identity(3)); // returns 3
-console.log(add(3, 4)); // returns 7
-console.log(mul(3, 4)); // returns 12
 
-var idf = identityf(3);
-console.log(idf()); // returns 3
+// Write a function that reverses the order of a binary functions
+// arguments then return the value of the binary function
 
-console.log(addf(3)(4)); // returns 7
-console.log(applyf(add)(3)(4)); // returns 7
-console.log(applyf(mul)(3)(4)); // returns 12
-var add3 = curry(add, 3); // adds 3 to arguments using this function
-var mul3 = curry(mul, 3); // multiplies 3 to arguments using this function
-console.log(add3(4)); // returns 7
-console.log(mul3(4)); // returns 12
+// var rsub = reverse(sub)
+// rsub(3,2) // returns -1
+// solution
+function reverse(binary) {
+  return function(num1, num2) {
+    return binary(num2, num1);
+  };
+};
+var rsub = reverse(sub)
+console.log(rsub(3,2)) // return -1
+
+
+
+
+
+
+
+
+
+
+
+
 
 //  using the functions above how would you add 1 to a Number
 // 3 different ways
@@ -229,26 +286,3 @@ var inc = applyf(add)(1);
 console.log(inc(5));
 var inc = addf(1);
 console.log(inc(6));
-
-
-Number.prototype.add = methodize(add) // adds add to Number objects
-console.log((3).add(4)); // returns 12
-
-console.log(demethodize(Number.prototype.add)(5,6)); // invokes the add function
-// result is 11
-
-var double = twice(add);
-var square = twice(mul);
-
-console.log(double(11)); // returns 22
-console.log(square(5)); // returns 25
-console.log(composeu(double, square)(3)); // returns 36
-console.log(composeb(add, mul)(2, 3, 5)); // returns 25
-
-// add_once = once(add)
-// console.log(add_once(3, 4)); // returns 7
-// console.log(add_once(3, 4)); // no function error
-
-var counter = counterf(10)
-console.log(counter.inc()); // returns 11
-console.log(counter.dec()); // returns 10
