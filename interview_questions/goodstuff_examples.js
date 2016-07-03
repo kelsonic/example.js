@@ -763,24 +763,95 @@ console.log(liftg(mul)(3)(2)(2)()); // 12
 // arrayg(2)() // [2]
 // arrayg(3)(0)(2)() // [3,0,2]
 
-
-function arrayg(func){
-  return function(first){
-    if (first === undefined){
-      return first;
+function arrayg(first){
+  var collection = [];
+  function fill(more){
+    if (more === undefined){
+      return collection;
     };
-    return function more(next){
-      if (next === undefined){
-        return first;
-      };
-      first = func(first, next);
-      return more;
-    };
+    collection.push(more);
+    return fill
   };
+  return fill(first);
 };
 
 console.log("problem 33");
-console.log(liftg(mul)()); // undefined
-console.log(liftg(mul)(2)()); // 2
-console.log(liftg(mul)(3)(0)(2)()); // 0
-console.log(liftg(mul)(3)(2)(2)()); // 12
+console.log(arrayg()); // []
+console.log(arrayg(2)()); // [2]
+console.log(arrayg(3)(0)(2)()); // [3,0,2]
+
+// Prob 34
+// make a function continuize that takes a urinary function
+// and returns a function that takes a callback and an argument
+// example
+// sqrtc = continuize(Math.sqrt);
+// sqrtc(alert, 81);
+
+function continuize(func){
+  return function (callback, arg){
+    return callback(func(arg));
+  };
+};
+console.log("problem 34");
+sqrtc = continuize(Math.sqrt);
+sqrtc(console.log, 81); // 9
+
+
+// Constructor functions
+
+function constructor(init){
+  var that = other_constructor(init); // objects your constructing
+  var member; // private variables
+  var method = function(){
+    // has access to that, init, member vars
+  };
+  that.method = method; // making some methods public methods
+  return that; // object returned from constructor that has methods
+};
+
+// Problem 35
+// make an array wrapper object with methods get, store, and append
+// such that an attacker can't access the the private array.
+// Example:
+// myvector = vector();
+// myvector.append(7);
+// myvector.store(1, 8);
+// myvector.get(0); // 7
+// myvector.get(1); // 8
+
+
+// typical way to constuct the vector function,
+
+
+function vector(){
+  array = [];
+  return {
+    append: function(num){
+      array.push(num);
+    },
+    store: function(idx, num){
+      array[idx] = num;
+    },
+    get: function(idx){
+      return array[idx];
+    }
+  };
+};
+console.log("problem 35");
+myvector = vector();
+myvector.append(7);
+myvector.store(1, 8);
+console.log(myvector.get(0)); // 7
+console.log(myvector.get(1)); // 8
+
+// but this can be attacked
+// figure out how to get to the varaible array in the function
+
+// Solution
+var stash; // set a variable
+myvector.store("push", function(){stash = this;}); // store a function with your
+// variable set to this (which has access to the array)
+// use push as the key so you can execute it with append
+myvector.append(); // this executes the function you made
+console.log(stash); // [7, 8, push:[Function]]
+// this exploits the dynamic nature of this
