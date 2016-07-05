@@ -10,13 +10,20 @@ function unique(array){
   });
   return Object.keys(collectionObj);
 }
+
 var timeInMs = Date.now();
 console.log(unique([1,2,2,2,3,4,5,5,6,7,6,2,8,8,7]));
-// result
 // [ '1', '2', '3', '4', '5', '6', '7', '8' ]
-
 console.log("Iterating took " + (Date.now() - timeInMs) + "ms");
 // Iterating took 21ms
+
+
+
+
+// -----------------------------------------------
+// A for loop is around 2 times less expensive than forEach
+
+
 
 function unique2(array){
   var collectionObj = {};
@@ -25,35 +32,46 @@ function unique2(array){
   };
   return Object.keys(collectionObj);
 }
+
+
 var timeInMs = Date.now();
 console.log(unique2([1,2,2,2,3,4,5,5,6,7,6,2,8,8,7]));
-// result
 // [ '1', '2', '3', '4', '5', '6', '7', '8' ]
 
 console.log("Iterating took " + (Date.now() - timeInMs) + "ms");
 // Iterating took 0ms
 
-// this function does a similar thing but uses a for loop which is
-// more performant likely due to less function calls.
+
+
+// -----------------------------------------------
+// Can we make this better?
+
+
 
 function removeDuplicate(arr){
+  
   var exists ={},
       outArr = [],
-      elm;
+      elm,
+      arrLength = arr.length;
 
-  for(var i =0; i<arr.length; i++){
+  for (var i = 0; i < arrLength; i++) {
     elm = arr[i];
-    if(!exists[elm]){
+
+    if (!exists[elm]) {
       outArr.push(elm);
       exists[elm] = true;
-   }
+    }
   }
+
   return outArr;
 }
+
+
 var timeInMs = Date.now();
 console.log(removeDuplicate([1,2,2,2,3,4,5,5,6,7,6,2,8,8,7]));
-// result
 // [ 1,2,3,4,5,6,7,8]
+
 console.log("Iterating took " + (Date.now() - timeInMs) + "ms");
 // Iterating took 1ms
 
