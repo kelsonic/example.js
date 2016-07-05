@@ -60,3 +60,37 @@ console.log(reverse('Hey there'));
 
 
 
+// -----------------------------------
+// Can you use a built-in method to clean it up?
+
+
+
+function reverse4(str) {
+  if (!str || str.length < 2)
+    return str;
+
+  return str.split('').reverse().join();
+}
+
+console.log('With built-in .reverse(): ');
+console.log(reverse('Hey there'));
+// 'ereht yeH'
+
+
+
+// ------------------------------------
+// Can you make it a string extension?
+
+
+
+String.prototype.reverse = function() {
+  if (!str || str.length < 2)
+    return str;
+
+  return str.split('').reverse().join();
+}
+
+
+console.log('With built-in .reverse(): ');
+console.log(reverse('Hey there'));
+// 'ereht yeH'
