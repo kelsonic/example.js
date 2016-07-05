@@ -855,3 +855,142 @@ myvector.store("push", function(){stash = this;}); // store a function with your
 myvector.append(); // this executes the function you made
 console.log(stash); // [7, 8, push:[Function]]
 // this exploits the dynamic nature of this
+
+// how to fix this?
+
+// change the index to an integer instead of string.  This prevents
+// hijacking push and/or replace push with the length of array.
+function vector(){
+  array = [];
+  return {
+    append: function(num){
+      array[array.length] = num;
+    },
+    store: function(idx, num){
+      array[+idx] = num; // changes idx to an integer not string
+    },
+    get: function(idx){
+      return array[+idx];
+    }
+  };
+};
+
+// Problem 36
+// make a function pubsub to make a publish/subscribe object
+// to deliver publications to subscribers in the right order
+// Example:
+// mypubsub = pubsub();
+// mypubsub.subscribe(log);
+// mypubsub.publish("It works!"); // log("It works!")
+
+// Typical solution
+function pubsub(){
+  subs = [];
+  return {
+    subscribe: function(func){
+      subs.push(func);
+    },
+    publish: function(pub){
+      var i;
+      for (i = 0; i < subs.length; i += 1){
+        subs[i](pub);
+      }
+    }
+  };
+};
+console.log("problem 36");
+mypubsub = pubsub();
+mypubsub.subscribe(console.log);
+mypubsub.publish("It works!"); // log("It works!")
+// This can be manipulated by a user.
+// Figure out how an attack can be done and how to prevent it.
+
+// simplest way to break pubsub is
+mypubsub.subscribe(); // creates undefined in subs array and will break publish
+// fix.. add try/catch
+function pubsub(){
+  subs = [];
+  return {
+    subscribe: function(func){
+      subs.push(func);
+    },
+    publish: function(pub){
+      var i;
+      for (i = 0; i < subs.length; i += 1){
+        try {
+          subs[i](pub);
+        } catch (ignore){
+
+        };
+      }
+    }
+  };
+};
+
+// another way is to set publish to undefined
+mypubsub.publish = undefined;
+// Fix: freeze the object so the methods can't be changed outside
+function pubsub(){
+  subs = [];
+  return Object.freeze({
+    subscribe: function(func){
+      subs.push(func);
+    },
+    publish: function(pub){
+      var i;
+      for (i = 0; i < subs.length; i += 1){
+        try {
+          subs[i](pub);
+        } catch (ignore){
+
+        };
+      }
+    }
+  });
+};
+
+// what if the user subscibes with a function that can access
+// and tamper with the subs array... example
+mypubsub.subscribe(function(){ this.length = 0}) // will break the for loop
+// Fix: use forEach which invokes each element and this is not scoped
+// to see the array anymore so it will ignore the attack function
+function pubsub(){
+  subs = [];
+  return Object.freeze({
+    subscribe: function(func){
+      subs.push(func);
+    },
+    publish: function(pub){
+      subs.forEach(function(ele){
+        try {
+          ele(pub);
+        } catch (ignore){
+
+        };
+      });
+    }
+  });
+};
+
+// They can still add a function that can cause out of order sequencing
+//  by adding a function that publishes
+// running the publish function n number of times...
+// Fix: use setTimeout to line up all functions into a timer queue
+// and execute in order pushing any other publishes to the end of the line
+// try/catch no longer needed as it will fail at the end of the turn but keep
+// going
+function pubsub(){
+  subs = [];
+  return Object.freeze({
+    subscribe: function(func){
+      subs.push(func);
+    },
+    publish: function(pub){
+      subs.forEach(function(ele){
+        setTimeout(function(){
+          ele(pub);
+        }, 0);
+      });
+    }
+  });
+};
